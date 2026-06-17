@@ -1,0 +1,10 @@
+
+ALERT SUMMARY REPORT
+
+========================
+
+Failed Login Attempts: 5
+SQL Injection Attempts: 1
+XSS Attempts: 2
+
+========================
