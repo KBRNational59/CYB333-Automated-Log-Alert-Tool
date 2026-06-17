@@ -1,1 +1,41 @@
+2026-06-10T08:01:12Z 192.168.1.10 LOGIN FAILED user=admin
+2026-06-10T08:01:18Z 192.168.1.10 LOGIN FAILED user=admin
+2026-06-10T08:01:23Z 192.168.1.10 LOGIN FAILED user=admin
+2026-06-10T08:01:30Z 192.168.1.10 LOGIN FAILED user=admin
+2026-06-10T08:01:45Z 192.168.1.10 LOGIN FAILED user=admin
+2026-06-10T08:02:00Z 192.168.1.10 LOGIN SUCCESS user=admin
 
+2026-06-10T08:07:10Z 192.168.1.25 SQL_QUERY query="SELECT * FROM users WHERE id='1' OR '1'='1'" url="/app/accounts"
+2026-06-10T08:07:12Z 192.168.1.25 SQL_INJECTION_ATTEMPT payload="' OR '1'='1" url="/app/accounts"
+
+2026-06-10T08:12:40Z 192.168.1.30 WEB_REQUEST url="/search?q=<script>alert('test')</script>" user_agent="Mozilla/5.0"
+2026-06-10T08:12:41Z 192.168.1.30 XSS_PAYLOAD payload="<script>alert('test')</script>" url="/search"
+
+2026-06-10T08:20:05Z 10.1.0.7 PORT_SCAN port=22 result=OPEN
+2026-06-10T08:20:05Z 10.1.0.7 PORT_SCAN port=80 result=OPEN
+2026-06-10T08:20:05Z 10.1.0.7 PORT_SCAN port=443 result=CLOSED
+2026-06-10T08:20:05Z 10.1.0.7 PORT_SCAN port=3306 result=OPEN
+
+2026-06-10T08:25:11Z 172.16.0.12 FILE_UPLOAD path="/upload" filename="report.pdf" result=SUCCESS
+2026-06-10T08:25:14Z 172.16.0.13 FILE_UPLOAD path="/upload" filename="invoice.docm" result=REJECTED reason=blocked_extension
+
+2026-06-10T08:34:50Z 203.0.113.5 AUTH_SUCCESS user=backup_service source=remote
+2026-06-10T08:35:01Z 203.0.113.5 PRIVILEGE_CHANGE user=backup_service from=standard to=admin
+
+2026-06-10T09:00:00Z 198.51.100.8 DATA_EXPORT file="customer_data.csv" rows=1420 result=SUCCESS
+2026-06-10T09:03:12Z 198.51.100.8 DATA_EXPORT file="employee_records.csv" rows=620 result=SUCCESS
+
+2026-06-10T09:10:05Z 172.16.0.4 MALWARE_DOWNLOAD url="http://malicious.example/bad.exe" result=BLOCKED
+2026-06-10T09:10:06Z 172.16.0.4 NETWORK_CONNECTION dest="malicious.example" port=80 result=REJECTED
+
+2026-06-10T09:15:22Z 10.0.0.22 CONFIG_CHANGE user=admin setting="password_policy" from="8" to="12"
+2026-06-10T09:15:27Z 10.0.0.22 CONFIG_CHANGE user=admin setting="firewall_mode" from="permissive" to="strict"
+
+2026-06-10T09:30:00Z 192.168.2.55 AUTH_FAILED user=john_doe reason=invalid_password
+2026-06-10T09:30:08Z 192.168.2.55 AUTH_FAILED user=john_doe reason=invalid_password
+2026-06-10T09:30:15Z 192.168.2.55 AUTH_FAILED user=john_doe reason=invalid_password
+2026-06-10T09:30:22Z 192.168.2.55 AUTH_FAILED user=john_doe reason=invalid_password
+2026-06-10T09:30:29Z 192.168.2.55 AUTH_SUCCESS user=john_doe
+
+2026-06-10T10:00:00Z 10.5.5.5 SYSTEM_ALERT message="CPU usage exceeded 90%" service="database"
+2026-06-10T10:05:00Z 10.5.5.5 SERVICE_RESTART service="database" result=SUCCESS
